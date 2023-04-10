@@ -1,0 +1,9 @@
+.item {
+    grid-area: main-content;
+    padding: 25px;
+}
+
+.item img {
+    border-radius: 50%;
+    width: 80px;
+}

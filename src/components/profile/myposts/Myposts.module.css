@@ -1,0 +1,8 @@
+.myposts {
+    grid-area: main-content;
+    padding: 25px;
+}
+
+.myposts img {
+    width: 80px;
+}
