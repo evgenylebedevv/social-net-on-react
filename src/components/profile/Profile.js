@@ -6,12 +6,15 @@ const Profile = () => {
     return (
         <div className={styles.profile}>
             <div>
-                <img src='https://blog.hootsuite.com/wp-content/uploads/2020/02/Image-copyright-556x556.png'/>
+                <img src="https://i.pinimg.com/564x/57/24/87/572487f5c1a3955242fed8bb90d2b531.jpg"/>
             </div>
             <div>
-                Description
+                My description
             </div>
-            <Myposts/>
+            <div>
+                <Myposts/>
+            </div>
+
         </div>
     )
 }

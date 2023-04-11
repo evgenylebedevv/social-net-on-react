@@ -1,4 +1,32 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "items messages";
+}
 
 .dialogs img {
-    width: 100px;
+    width: 80px;
+}
+
+.peoples {
+    border-right: 1px solid lightgray;
+    grid-area: items;
+    padding: 0;
+}
+
+.people {
+
+}
+
+.active {
+    color: #ffbb00;
+    text-decoration: none;
+}
+
+.messages {
+    grid-area: messages;
+}
+
+.message {
+    padding: 25px;
 }
