@@ -1,5 +1,53 @@
 .footer {
+    padding-bottom: 5px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    grid-area: footer;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-areas: "info devby fmenu";
 }
+
+.info {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    grid-area: info;
+    color: white;
+    margin: 0 auto;
+}
+
+.devby {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    grid-area: devby;
+    margin: 0 auto;
+}
+
+.fmenu {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    grid-area: fmenu;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    align-content: center;
+    justify-content: center;
+}
+
+a:hover {
+    color: #ffbb00
+}
+

@@ -14,19 +14,6 @@
     padding: 0;
 }
 
-.people {
-
-}
-
-.active {
-    color: #ffbb00;
-    text-decoration: none;
-}
-
 .messages {
     grid-area: messages;
-}
-
-.message {
-    padding: 25px;
 }

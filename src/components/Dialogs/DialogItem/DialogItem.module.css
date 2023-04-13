@@ -1,0 +1,16 @@
+
+.people {
+    color: black;
+    text-decoration: none;
+}
+
+.people:hover {
+    color: #ffbb00;
+    text-decoration: none;
+}
+
+
+.active {
+    color: #ffbb00;
+    text-decoration: none;
+}

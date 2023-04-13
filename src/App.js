@@ -2,7 +2,6 @@ import './App.css';
 import React from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import Messages from "./components/Messages/Messages";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
@@ -11,7 +10,8 @@ import Settings from "./components/Settings/Settings";
 import Music from "./components/Music/Music";
 import News from "./components/News/News";
 
-function App() {
+//Route слушает путь в сроке браузера и отрисовывает компонент
+function App(props) {
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
@@ -19,11 +19,11 @@ function App() {
                 <Navbar/>
                 <div className="app-wrapper-content">
                     <Routes>
-                        <Route path='/dialogs' Component={Dialogs}/>
-                        <Route path='/profile' Component={Profile}/>
-                        <Route path='/news' Component={News}/>
-                        <Route path='/music' Component={Music}/>
-                        <Route path='/settings' Component={Settings}/>
+                        <Route path='/profile' element={<Profile posts={props.posts}/>}/>
+                        <Route path='/dialogs' element={<Dialogs dialogsData={props.dialogsData} messages={props.messages}/>}/>
+                        <Route path='/news' element={<News/>}/>
+                        <Route path='/music' element={<Music/>}/>
+                        <Route path='/settings' element={<Settings/>}/>
                     </Routes>
                 </div>
                 <Footer/>

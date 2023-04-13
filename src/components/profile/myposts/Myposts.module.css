@@ -6,3 +6,19 @@
 .myposts img {
     width: 80px;
 }
+
+.btn {
+    padding: 10px 45px;
+    color: white;
+    background-color: #ffbb00;
+    border: none;
+}
+
+.textarea {
+    width: 500px;
+    border: 1px solid #ffbb00;
+}
+
+.textarea .active {
+    border: 1px solid #ff0000;
+}

@@ -4,7 +4,15 @@ import styles from './Footer.module.css'
 const Footer = () => {
     return (
         <div className={styles.footer}>
-            <a href='https://siteprovider.ru'>siteprovider.ru</a>
+            <div className={styles.info}>
+                info
+            </div>
+            <div className={styles.devby}>
+                <a href='https://siteprovider.ru'>dev by siteprovider.ru</a>
+            </div>
+            <div className={styles.fmenu}>
+                menu
+            </div>
         </div>)
 }
 

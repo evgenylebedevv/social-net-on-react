@@ -2,7 +2,11 @@ import React from "react";
 import styles from './Myposts.module.css'
 import Mypost from "./Post/Mypost";
 
-const Myposts = () => {
+const Myposts = (props) => {
+
+    // Формирование отдельного поста из массива
+    const post = props.posts.map(item => <Mypost id={item.id} messages={item.messages} likesCount={item.likesCount}/>)
+
     return (
         <div className={styles.myposts}>
             <div>
@@ -11,15 +15,12 @@ const Myposts = () => {
                 </h1>
             </div>
             <div>
-                <textarea></textarea>
+                <textarea className={styles.textarea} placeholder={'Enter your message'}></textarea>
             </div>
             <div>
-                <button>New Post</button>
+                <button className={styles.btn}>New Post</button>
             </div>
-            <Mypost message="Hey whats upp" likesCount="23"/>
-            <Mypost message="Nice, thnx" likesCount="1"/>
-            <Mypost/>
-            <Mypost/>
+            { post }
         </div>
     )
 }
