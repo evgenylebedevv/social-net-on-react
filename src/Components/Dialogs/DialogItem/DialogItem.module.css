@@ -1,7 +1,18 @@
+.container {
+    display: grid;
+    justify-content: start;
+
+}
+
+.name {
+    text-align: center;
+
+}
 
 .people {
     color: black;
     text-decoration: none;
+    padding: 20px;
 }
 
 .people:hover {
@@ -9,8 +20,14 @@
     text-decoration: none;
 }
 
-
 .active {
     color: #ffbb00;
     text-decoration: none;
 }
+
+.avatar {
+
+    grid-area: avatar;
+    border-radius: 50%;
+}
+

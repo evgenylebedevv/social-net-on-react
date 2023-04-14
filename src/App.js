@@ -1,14 +1,14 @@
 import './App.css';
 import React from "react";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import Navbar from "./components/Navbar/Navbar";
-import Profile from "./components/profile/Profile";
-import Dialogs from "./components/Dialogs/Dialogs";
+import Footer from "./Components/Footer/Footer";
+import Header from "./Components/Header/Header";
+import Navbar from "./Components/Navbar/Navbar";
+import Profile from "./Components/profile/Profile";
+import Dialogs from "./Components/Dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Settings from "./components/Settings/Settings";
-import Music from "./components/Music/Music";
-import News from "./components/News/News";
+import Settings from "./Components/Settings/Settings";
+import Music from "./Components/Music/Music";
+import News from "./Components/News/News";
 
 //Route слушает путь в сроке браузера и отрисовывает компонент
 function App(props) {
@@ -16,16 +16,17 @@ function App(props) {
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
-                <Navbar/>
+                <Navbar dialogsData={props.state.dialogsPage.dialogsData}/>
                 <div className="app-wrapper-content">
                     <Routes>
-                        <Route path='/profile' element={<Profile posts={props.posts}/>}/>
-                        <Route path='/dialogs' element={<Dialogs dialogsData={props.dialogsData} messages={props.messages}/>}/>
+                        <Route path='/profile' element={<Profile posts={props.state.profilePage.posts}/>}/>
+                        <Route path='/dialogs' element={<Dialogs dialogsData={props.state.dialogsPage.dialogsData} messages={props.state.dialogsPage.messages}/>}/>
                         <Route path='/news' element={<News/>}/>
                         <Route path='/music' element={<Music/>}/>
                         <Route path='/settings' element={<Settings/>}/>
                     </Routes>
                 </div>
+
                 <Footer/>
             </div>
         </BrowserRouter>

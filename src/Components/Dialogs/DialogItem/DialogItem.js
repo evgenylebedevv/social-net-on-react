@@ -7,8 +7,12 @@ const DialogItem = (props) => {
     const path = "/dialogs/" + props.id; // Формирование ссылки для конкретного диалога
 
     return (
-        <div>
-            <NavLink to={path} className={link => link.isActive ? styles.active : styles.people}>{props.name}</NavLink>
+        <div className={styles.container}>
+            <NavLink to={path} className={link => link.isActive ? styles.active : styles.people}>
+                <img className={styles.avatar} src={props.image}/>
+                <div className={styles.name}>{props.name}</div>
+            </NavLink>
+
         </div>
     )
 } // Компонент для формирования имён со ссылками

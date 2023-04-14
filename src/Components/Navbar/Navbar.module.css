@@ -1,0 +1,50 @@
+.nav {
+    grid-area: nav;
+    padding: 15px;
+    color: white;
+    background-color: #607afe;
+}
+
+.item {
+    text-decoration: none;
+    color: white;
+}
+
+.item :hover {
+    color: #ffbb00;
+    cursor: pointer;
+}
+
+.active {
+    color: #ffbb00;
+    text-decoration: none;
+}
+
+.friendsWrapper {
+    margin-top: 33%;
+}
+
+.friendsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.friendsImage {
+    max-width: 4vw;
+    border-radius: 50%;
+}
+
+.friend {
+    margin: 0px 5px;
+    padding: 0;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}

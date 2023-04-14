@@ -1,7 +1,7 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-areas: "items messages";
+    grid-template-columns: 140px 5fr;
+    grid-template-areas: "peoples messages";
 }
 
 .dialogs img {
@@ -10,10 +10,14 @@
 
 .peoples {
     border-right: 1px solid lightgray;
-    grid-area: items;
+    grid-area: peoples;
     padding: 0;
 }
 
 .messages {
     grid-area: messages;
+}
+
+.avatar {
+    border-radius: 50%;
 }
