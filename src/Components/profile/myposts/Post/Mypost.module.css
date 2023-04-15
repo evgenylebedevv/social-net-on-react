@@ -1,5 +1,8 @@
 .item {
-    grid-area: main-content;
+    display: grid;
+    color: black;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 120px 1fr;
     padding: 25px;
 }
 
@@ -18,4 +21,8 @@
 .likes {
    align-items: center;
     justify-content: center;
+}
+
+.message {
+    padding-top: 27px;
 }

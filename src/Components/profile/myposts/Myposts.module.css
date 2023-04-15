@@ -1,9 +1,9 @@
-.myposts {
+.posts {
     grid-area: main-content;
     padding: 25px;
 }
 
-.myposts img {
+.posts img {
     width: 80px;
 }
 

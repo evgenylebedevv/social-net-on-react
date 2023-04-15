@@ -11,6 +11,12 @@ const Dialogs = (props) => {
     const messagesElements = props.messages.map((item) =>
         <Message id={item.id} message={item.message}/>) // Передача пропсов сообщений в компонент
 
+    let newMessage = React.createRef()
+    let sendMessage = () => {
+        let text = newMessage.current.value;
+        alert(text);
+    }
+
     // Рендеринг
     return (
         <div className={styles.dialogs}>
@@ -19,6 +25,13 @@ const Dialogs = (props) => {
             </div>
             <div className={styles.messages}>
                 {messagesElements}
+            </div>
+            <div className={styles.textareaContainer}>
+                <p>Написать сообщение:</p>
+                <textarea ref={ newMessage } className={styles.textarea}></textarea>
+                <div>
+                    <button onClick={ sendMessage } className={styles.btn}>Отправить</button>
+                </div>
             </div>
         </div>
     )
