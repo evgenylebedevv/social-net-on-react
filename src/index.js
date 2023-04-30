@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 let rerenderEntireTree = (state) => {
     root.render(
-        <App state={state} dispatch={store.dispatch.bind(store)} profilePage={store._state}/>
+        <App state={state} dispatch={store.dispatch.bind(store)} profilePage={store._state} store={store}/>
     );
 }
 
