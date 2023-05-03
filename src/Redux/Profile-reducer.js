@@ -6,6 +6,7 @@ export const addPostActionCreator = () => ({type: ADD_POST});
 export const updateNewPostTextActionCreator = (text) =>
     ({type: UPDATE_NEW_POST_TEXT, newText: text});
 
+//начальные значения
 let initialState = {
         posts: [
             {id: 1, message: "Hey what's upp", likesCount: 1},
@@ -20,7 +21,7 @@ const profileReducer = (state = initialState, action) => {
         case ADD_POST:
             let newPost = {
                 id: 5,
-                message: state.newPostText,
+                message: state.newPostText, //приходит из пропсов, из инпута textarea.value
                 likesCount: 0
             }
             state.posts.push(newPost);
