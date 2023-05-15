@@ -6,30 +6,31 @@ import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/profile/Profile";
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Settings from "./Components/Settings/Settings";
 import Music from "./Components/Music/Music";
 import News from "./Components/News/News";
+import UsersContainer from "./Components/Users/UsersContainer";
+
 
 
 //Route слушает путь в сроке браузера и отрисовывает компонент
-function App(props) {
+function App() {
     return (
-        <BrowserRouter>
-            <div className='app-wrapper'>
-                <Header/>
-                <Navbar dialogsData={props.state.dialogsPage.dialogsData}/>
-                <div className="app-wrapper-content">
-                    <Routes>
-                        <Route path='/profile' element={<Profile store={props.store}/>}/>
-                        <Route path='/dialogs' element={<DialogsContainer store={props.store}/>}/>
-                        <Route path='/news' element={<News/>}/>
-                        <Route path='/music' element={<Music/>}/>
-                        <Route path='/settings' element={<Settings/>}/>
-                    </Routes>
-                </div>
-                <Footer/>
+        <div className='app-wrapper'>
+            <BrowserRouter>
+            <Header />
+            <Navbar />
+            <div className="app-wrapper-content">
+                <Routes>
+                    <Route path='/profile' element={<Profile />}/>
+                    <Route path='/dialogs' element={<DialogsContainer />}/>
+                    <Route path='/users' element={<UsersContainer />}/>
+                    <Route path='/profile' element={<Music />}/>
+                    <Route path='/dialogs' element={<News />}/>
+                </Routes>
             </div>
-        </BrowserRouter>
+            <Footer/>
+            </BrowserRouter>
+        </div>
     );
 }
 

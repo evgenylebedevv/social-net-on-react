@@ -3,18 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import store from './Redux/redux-store'
+import {Provider} from "react-redux" //Передает контекст
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-let rerenderEntireTree = (state) => {
+//Provider передает контекст
+
     root.render(
-        <App state={state} dispatch={store.dispatch.bind(store)} store={store}/>
+            <Provider store={store}>
+        <App />
+            </Provider>
     );
-}
 
-rerenderEntireTree(store.getState());
+//то что было в app
+// state={state} dispatch={store.dispatch.bind(store)} store={store}
 
-store.subscribe(() => {
-    let state = store.getState()
-    rerenderEntireTree(state)
-});
+// rerenderEntireTree(store.getState());
+
+
+// store.subscribe(() => {
+//     let state = store.getState()
+//     rerenderEntireTree(state)
+// });

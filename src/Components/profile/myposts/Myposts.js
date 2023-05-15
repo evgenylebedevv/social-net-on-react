@@ -3,6 +3,7 @@ import styles from './Myposts.module.css'
 import Mypost from "./Post/Mypost";
 
 const Myposts = (props) => {
+
     // Формирование отдельного поста из массива
     const post = props.posts.map(item =>
         <Mypost id={item.id} message={item.message} likesCount={item.likesCount}/>)
