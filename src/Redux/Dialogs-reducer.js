@@ -1,5 +1,9 @@
+import user1 from '../user-1.jpg';
+import user2 from '../user-2.jpg';
+import user3 from '../user-3.jpg';
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY';
 const SEND_MESSAGE = 'SEND_MESSAGE';
+
 
 // Actions это объекты (Вызываются из компонентов и передаются через dispatch(props):
 export const sendMessageCreator = () => ({type: SEND_MESSAGE})
@@ -9,9 +13,9 @@ export const updateNewMessageBodyCreator = (body) =>
 let initialState = {
     // Входные данные для формирования имён
     dialogsData: [
-        {id: 1, name: "Elisaveta", image: "user-1.jpg"},
-        {id: 2, name: "Artem", image: "user-2.jpg"},
-        {id: 3, name: "Alisa", image: "user-3.jpg"}
+        {id: 1, name: "Elisaveta", image: user1},
+        {id: 2, name: "Artem", image: user2},
+        {id: 3, name: "Alisa", image: user3}
     ],
     // Входные данные для формирования сообщений
     messages: [
